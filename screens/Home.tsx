@@ -29,9 +29,10 @@ function HomeScreen({ route }: Props) {
             borderRadius: 5,
           }}
         />
-        <Text>
-          {name} {age} hello
-        </Text>
+        <Text>{`{
+        name: ${name},
+        age: ${age}
+   }`}</Text>
       </View>
     </>
   );
