@@ -3,11 +3,13 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 import HomeScreen from "./screens/Home";
 import LoginScreen from "./screens/LoginScreen";
-import { Button } from "react-native";
 
 type RootStackParamList = {
   Login: undefined;
-  Home: undefined;
+  Home: {
+    name: string;
+    age: number;
+  };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

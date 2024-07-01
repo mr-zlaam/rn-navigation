@@ -5,7 +5,7 @@ import { RouteProp } from "@react-navigation/native";
 
 type RootStackParamList = {
   Login: undefined;
-  Home: undefined;
+  Home: { name: string; age: number };
 };
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<
@@ -19,12 +19,14 @@ type Props = {
 };
 
 const LoginScreen = ({ navigation }: Props) => {
+  const name = "siraj";
+  const age = 23;
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text style={{ fontSize: 30 }}>LoginScreen</Text>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate("Home");
+          navigation.navigate("Home", { name, age });
         }}
         style={{
           backgroundColor: "blue",

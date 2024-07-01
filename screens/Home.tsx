@@ -1,7 +1,18 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import {} from "react";
 import { View, Text, TextInput } from "react-native";
 
-function HomeScreen() {
+type RootStackParamList = {
+  Login: undefined;
+  Home: {
+    name: string;
+    age: number;
+  };
+};
+type Props = NativeStackScreenProps<RootStackParamList, "Home">;
+
+function HomeScreen({ route }: Props) {
+  const { name, age } = route.params;
   return (
     <>
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -18,6 +29,9 @@ function HomeScreen() {
             borderRadius: 5,
           }}
         />
+        <Text>
+          {name} {age} hello
+        </Text>
       </View>
     </>
   );
