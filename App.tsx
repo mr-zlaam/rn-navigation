@@ -1,8 +1,7 @@
-import {} from "react";
-import { View, Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+import {} from "react";
+import { Text, View } from "react-native";
 const Tab = createMaterialTopTabNavigator();
 function App() {
   return (
